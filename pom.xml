@@ -13,7 +13,7 @@
 	<groupId>com.cpresource.problem.parser</groupId>
 	<artifactId>CodeForceProblemParser</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>CodeForceProblemParser</name>
 	<description>Returns the problem for  a Contest ID.</description>
 
@@ -61,13 +61,22 @@
 			<version>1.1.1</version>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- <plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<processTypes>
+						<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
+					</processTypes>
+				</configuration>
+			</plugin> -->
 		</plugins>
 	</build>
 
