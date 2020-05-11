@@ -1,6 +1,7 @@
 package com.cpresource.problem.parser.service;
 
 import java.net.URI;
+
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Currency;
@@ -14,7 +15,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-
 
 public class ProblemService {
 	@Autowired
@@ -49,6 +49,9 @@ public class ProblemService {
 				contestProblem.put(contestId, arr);
 			}
 		}
+		StoreContent pb = new StoreContent();
+		pb.setProblems(contestProblem);
+		Store.storeData(pb);
 		Result requiredData = new Result();
 		requiredData.setContestID(CID);
 		requiredData.setProblems(contestProblem.get(CID));

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cpresource.problem.parser.service.DemoProblems;
 import com.cpresource.problem.parser.service.DemoProblemsService;
 import com.cpresource.problem.parser.service.Result;
+import com.cpresource.problem.parser.service.Store;
 import com.cpresource.problem.parser.service.ProblemService;
 
 @RestController
@@ -23,6 +24,11 @@ public class ProblemsParser {
 	
 	@GetMapping(value = "/contest/{id}")
 	public Result getProblems(@PathVariable String id) throws URISyntaxException {
+		Result r = Store.readData(id);
+		if( r != null) {
+			System.out.println("found in data");
+			return r;
+		}
 		return problemService.getData(id);
 		//return problemService.getData(id);
 	}
