@@ -4,7 +4,6 @@ import java.net.URI;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.Currency;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpSession;

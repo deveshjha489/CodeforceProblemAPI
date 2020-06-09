@@ -12,8 +12,6 @@ public class Store {
 		ObjectMapper  mapper = new ObjectMapper();
 		try {
 			mapper.writeValue(new File("data.json"), pb);
-			String jsonInString = mapper.writeValueAsString(pb);
-			jsonInString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(pb);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
