@@ -10,7 +10,7 @@
 </head>
 <body style="margin-top : 100px">
 	<center>
-	<h1>CodeforceProblemParser</h1>
+	<h1>Codeforces API Wrapper</h1>
 		
 			<div>
 				<h3>Get Problems by Contest ID from codeforce</h3>
