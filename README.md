@@ -1,4 +1,4 @@
-# CodeforceProblemParser
+# CodeforceProblemAPI
 
 1.) Get Problems by Contest ID from codeforce
 
